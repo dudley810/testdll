@@ -13,7 +13,8 @@ public class TestController : ControllerBase
         this.tc = pobj;
     }
 
-    [HttpGet(Name = "GetTC")]
+    [HttpGet]
+    [Route("gettc")]
     public ActionResult Get(int n1,int n2)
     {
         return Ok(tc.MyMethod(n1, n2));
